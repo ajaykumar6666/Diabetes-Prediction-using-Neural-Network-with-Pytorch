@@ -1,0 +1,30 @@
+Implemented a Neural Network for prediction of a disease using Pytorch Library.
+The features include:
+  Age
+  BMI
+  DiabetesPedigreeFunction
+  BloodPressure
+  Glucose levels
+  SkinThickness
+  Insulin
+  Pregnancies(number)
+  
+The Outcome is going to be either diabetic (1) or Not diabetic (0).
+
+I used NumPy and Pandas Libraries for preprocessing.
+Seaborn is used for Visualisation.
+There are no null values but there are some 0 values in some features. So, these 0 values are being imputed based on the other features.
+
+After the preprocessing, Implemented a very basic neural network to know about the loss and accuracy. based on that I have started increasing
+the neurons in the hidden layer and then go on increasing the number of hidden layers and at the same time used different Optimisation algorithms like Stocastic
+Gradient descent, ADAM, ADAGRAD, ADAMAX etc and choose the best.
+
+I choose the minimal number of hidden layers that gives the maximum amount of accuracy. My motto behind this is, if we use a very huge neural network with
+10 hidden layers or more, it leads to over fitting.
+
+I also visualised the loss after every 10 or 25 iterations. The main reason for this book keeping is to check for the loss and be sure that the loss
+is decreasing as the iterations go on. In many cases, when I have worked on it, The loss has been constant after some iterations and even I increase the 
+no of Iterations or increase the no of hidden layers, the loss hasn't changed. And that is an issue.
+
+Finally, I got the neural network after doing hyper parameter tuning by changing hidden layers, hidden nuerons, optimisation algorithms.
+Achieved an accuracy of 78% and got a loss of 0.45 on an average roughly. The model is also being uploaded on github and can be directly used.
